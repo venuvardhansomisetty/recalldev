@@ -1,12 +1,20 @@
 import { useState } from "react";
+import Login from "./Login";
 import Dashboard from "./Dashboard";
 import Review from "./Review";
 import AddCard from "./AddCard";
 import AllCards from "./AllCards";
 
 export default function App() {
-  const user = { id: 1, name: "Me" }; // fixed user for now, login comes in Stage 2
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [page, setPage] = useState("dashboard");
+
+  const logout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
+  };
+
+  if (!user) return <Login onLogin={setUser} />;
 
   const menu = [
     ["dashboard", "Dashboard"],
@@ -22,14 +30,15 @@ export default function App() {
         {menu.map(([key, label]) => (
           <button
             key={key}
+
             className={"btn btn-sm " + (page === key ? "btn-light" : "btn-outline-light")}
             onClick={() => setPage(key)}
           >
             {label}
           </button>
         ))}
+        <button className="btn btn-sm btn-danger ms-auto" onClick={logout}>Logout</button>
       </nav>
-
 
       <div className="container py-4">
         {page === "dashboard" && <Dashboard user={user} />}
