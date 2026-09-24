@@ -7,9 +7,6 @@ RecallDev shows each interview question again at the right time, so it stays in 
 **Backend API:** [(https://recalldev-backend.onrender.com)]
 (The backend is on a free plan and sleeps when idle. The first load can take up to a minute.)
 
-## Screenshots
-(Add 2-3 screenshots: Dashboard, Review screen, All Cards)
-
 ## Features
 - Register and login (passwords stored as BCrypt hashes)
 - Add interview questions with answers and a topic tag
@@ -39,3 +36,10 @@ Backend layers: Controller -> Service -> Repository -> Model
 ## Known limitations and next steps
 - Login is simple (the browser sends the user id). Next step: JWT authentication.
 - Planned: daily email reminders, weak-topic analytics.
+
+
+## Screenshots
+<img width="1365" height="641" alt="Screenshot 2026-09-24 232230" src="https://github.com/user-attachments/assets/6a3739e9-98f2-46fb-a223-8aa53b07038e" />
+<img width="1362" height="636" alt="Screenshot 2026-09-24 232202" src="https://github.com/user-attachments/assets/d680b73c-9d29-4d60-9130-a9ad79eab329" />
+<img width="1365" height="636" alt="Screenshot 2026-09-24 232217" src="https://github.com/user-attachments/assets/97081932-c6c3-49eb-bd00-a37c21f7dbbf" />
+<img width="1365" height="632" alt="Screenshot 2026-09-24 232126" src="https://github.com/user-attachments/assets/1d6cafa9-e4ae-4139-b7df-fb77e7b48a00" />
